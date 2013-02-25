@@ -22,7 +22,7 @@ clang_SRC_FILES := \
   driver.cpp
 
 LOCAL_SRC_FILES := $(clang_SRC_FILES)
-LOCAL_CFLAGS := -fno-strict-aliasing
+LOCAL_CFLAGS := -fno-strict-aliasing $(call-c-cpp-option,-Qunused-arguments)
 
 LOCAL_STATIC_LIBRARIES := \
   libclangFrontendTool \

@@ -34,7 +34,7 @@ clang_lex_SRC_FILES := \
   TokenLexer.cpp
 
 LOCAL_SRC_FILES := $(clang_lex_SRC_FILES)
-LOCAL_CFLAGS := -fno-strict-aliasing
+LOCAL_CFLAGS := -fno-strict-aliasing $(call-cc-cpp-option,-Qunused-arguments)
 
 LOCAL_MODULE:= libclangLex
 LOCAL_MODULE_TAGS := optional

@@ -41,7 +41,7 @@ clang_basic_SRC_FILES := \
   VersionTuple.cpp
 
 LOCAL_SRC_FILES := $(clang_basic_SRC_FILES)
-LOCAL_CFLAGS := -fno-strict-aliasing
+LOCAL_CFLAGS := -fno-strict-aliasing $(call-cc-cpp-option,-Qunused-arguments)
 
 LOCAL_MODULE:= libclangBasic
 LOCAL_MODULE_TAGS := optional
